@@ -47,9 +47,12 @@ h2
   line-height: 34px
 
 header
-  margin-bottom: 28px
+  padding:
+    top: 20px
+    bottom: 38px
   +tiny
-    margin-bottom: 12px
+    padding-top: 10px
+    padding-bottom: 12px
   color: $red
   font:
     size: 22px
@@ -60,9 +63,11 @@ header
   h1
     font-weight: bold
 
+.signup, .sponsor
+  display: inline-block
+  vertical-align: top
+
 .signup
-  +tiny
-    margin: 0 auto
   +border-radius(10px)
   background: $red
   &, a
@@ -80,8 +85,12 @@ header
     text:
       decoration: none
       align: center
+  +tiny
+    margin: 0 auto
+    display: block
 
 .description
+  margin-bottom: 50px
   line-height: 28px
   +tiny
     line-height: 24px
@@ -95,5 +104,26 @@ header
     margin: 30px 0 20px
     color: #444
 
-.description+.signup
-  margin-top: 50px
+.sponsor
+  padding:
+    top: 4px
+    left: 100px
+  a
+    text-decoration: none
+  span
+    vertical-align: top
+    line-height: 40px
+    padding-left: 7px
+    font-size: 12px
+    color: #999
+  img
+    height: 50px
+  +tiny
+    margin-top: 60px
+    span
+      display: block
+      padding: 0
+
++tiny
+  header + .signup + .sponsor
+    display: none !important
