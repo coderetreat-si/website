@@ -1,0 +1,99 @@
+@import "jaf_facitweb"
+@import "bourbon/bourbon"
+
+=tiny
+  @media (max-width: 320px)
+    @content
+=small
+  @media (max-width: 768px)
+    @content
+=large
+  @media (min-width: 800px)
+    @content
+
+$red: #d73513
+
+html, body
+  margin: 0
+  padding: 0
+
+html
+  padding-bottom: 100px
+
+body
+  margin: 0 auto
+  max-width: 680px
+  padding: 20px
+  +small
+    padding: 40px 60px
+  +tiny
+    padding: 10px
+  color: #333
+  +tiny
+    color: #222
+  +large
+    color: #555
+  font:
+    family: Avenir-Roman, helvetica, sans-serif
+    size: 18px
+  +tiny
+    font-size: 16px
+
+h1, h2
+  font-family: "JAFFacitWebLight"
+  font-weight: normal
+
+h2
+  line-height: 34px
+
+header
+  margin-bottom: 28px
+  +tiny
+    margin-bottom: 12px
+  color: $red
+  font:
+    size: 22px
+  +tiny
+    font-size: 16px
+  h1, h2
+    margin: 0
+  h1
+    font-weight: bold
+
+.signup
+  +tiny
+    margin: 0 auto
+  +border-radius(10px)
+  background: $red
+  &, a
+    width: 150px
+  a
+    padding: 0.6em 0
+    +large
+      padding: 0.4em 0
+    display: block
+    color: #fff
+    font:
+      weight: bold
+    +large
+      font-weight: normal
+    text:
+      decoration: none
+      align: center
+
+.description
+  line-height: 28px
+  +tiny
+    line-height: 24px
+
+  p
+    margin-bottom: 18px
+  a
+    color: darken($red, 10%)
+  h2
+    padding: 0
+    margin: 30px 0 20px
+    color: #444
+
+.description+.signup
+  margin-top: 50px
